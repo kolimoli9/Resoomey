@@ -9,13 +9,10 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
 
-    <title>קורות חיים</title>
-<!--
-SOFTY PINKO
-https://templatemo.com/tm-535-softy-pinko
--->
+    <title> Resoomey</title>
 
-    <!-- Additional CSS Files -->
+
+    <!-- CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
@@ -70,9 +67,9 @@ https://templatemo.com/tm-535-softy-pinko
             <div class="container">
                 <div class="row">
                     <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
-                        <h1>אז למה לא להציג את הקורות חיים <br>בצורה יפה ורספונסיבית</h1>
-                        <p>דרך אתר זה אפשר להגיע לעוד פרוייקטים שאלות בסוף</p>
-                        <a href="#features" class="main-button-slider">ראו עוד</a>
+                        <h1>This site was made out of <br> boredom </h1>
+                        <p>  </p>
+                        <a href="#features" class="main-button-slider">see more </a>
                     </div>
                 </div>
             </div>
@@ -174,7 +171,7 @@ https://templatemo.com/tm-535-softy-pinko
                             לפני הצבא במקביל ללימודים עבדתי בחקלאות, קיבלתי משימות ועבדתי כמפעיל טרקטור, התקנה, החלפה ותיקון קווי השקיה, חרישה, קטיף, ואבטחת יבול.
  מלצרות במסעדות ,גינון וניקיון גינות, טבח במסעדות
 כרגע עובד בחנות עודפים של קולומביה כאיש מכירות במקביל ללימודים
-
+so basically NONE..
                         </p>
                     </div>
                 </div>
@@ -239,9 +236,8 @@ https://templatemo.com/tm-535-softy-pinko
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                         <a href="#" class="mini-box">
                             <i><img src="assets/images/work-process-item-01.png" alt=""></i>
-                            <strong>שפות</strong>
-                            <span>עברית: אקסטרימלי גוד
-                                English: hazak rezah
+                            <strong>Languages</strong>
+                            <span> English,Hebrew
                             </span>
                         </a>
                     </div>
@@ -262,26 +258,26 @@ https://templatemo.com/tm-535-softy-pinko
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="count-item decoration-bottom">
-                            <strong>206</strong>
-                            <span>Bones in my body</span>
+                            <strong>50</strong>
+                            <span>   </span>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="count-item decoration-top">
                             <strong>100</strong>
-                            <span>Houers spent on this</span>
+                            <span>   </span>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="count-item decoration-bottom">
-                            <strong>18</strong>
-                            <span>Is the perfect age for me</span>
+                            <strong>150</strong>
+                            <span>     </span>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="count-item">
-                            <strong>27</strong>
-                            <span>Are too old</span>
+                            <strong>200</strong>
+                            <span>  </span>
                         </div>
                     </div>
                 </div>
@@ -323,7 +319,7 @@ https://templatemo.com/tm-535-softy-pinko
                 <!-- ***** Contact Form Start ***** -->
                 <div class="col-lg-8 col-md-6 col-sm-12">
                     <div class="contact-form">
-                        <form id="contact" action="" method="get">
+                        <form id="contact" onsubmit="sendEmail(); reset(); return false" >
                           <div class="row">
                             <div class="col-lg-6 col-md-12 col-sm-12">
                               <fieldset>
@@ -361,11 +357,7 @@ https://templatemo.com/tm-535-softy-pinko
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <ul class="social">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -392,6 +384,22 @@ https://templatemo.com/tm-535-softy-pinko
     
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "kolimoli9@gmail.com",
+            Password : "kolimoli9",
+            To : 'kolimoli9@gmail.com',
+            From : document.getElementById('email').value,
+            Subject : "Resoomey-Contact-Form",
+            Body : 'Name: ' + document.getElementById('name').value
+                   + document.getElementById('message').value
+        }).then(
+        message => alert('Message Sent!')
+        );
+    }
+</script>
   </body>
 </html>
